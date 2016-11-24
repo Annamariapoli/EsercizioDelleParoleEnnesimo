@@ -20,16 +20,19 @@ public class Model {
 	public boolean parolaAccettata(String parolaNuova){               //ok
 		boolean presente = parolaPresente(parolaNuova);
 		boolean nonLegata = parolaNonLegata(parolaNuova);
-		if(!presente && !nonLegata){             //se non è presente e se è legata
+		if(!presente && !nonLegata ){
+			parole.add(parolaNuova);
+		                                          //se non è presente e se è legata
 			System.out.println(true);
 		    return true;
 		}
 		else 
 			System.out.println(false);
-		    return false;
+		    return false;	
 	}
 	
 	public boolean parolaNonLegata(String parolaNuova){                  //ok
+	   if(!parole.isEmpty()){	                                  //se la lista non è vuota
 		String ultimaParola = parole.get(parole.size()-1);                                                   //ultima parola      //ok
 		String ultimeLettere =ultimaParola.substring(ultimaParola.length()-2, ultimaParola.length());       //ultime 2 lettere   //ok
 		String primeLettere = parolaNuova.substring(0,2);                             //prime 2 lettere    //ok
@@ -39,11 +42,12 @@ public class Model {
 		if(ultimeLettere.equals(primeLettere)){    //non sono legate
 		//System.out.println(false);
 			return false;
-		}
-		else {
-		//System.out.println(true);
-	     	return true;
-	   	}
+		   }
+		
+	   }
+		
+	return true;
+	   	
 	}
 	
 	/*public boolean parolaDB(String parolaNuova){
