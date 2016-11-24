@@ -12,19 +12,22 @@ public class Main {
 		String s6 = "vapore";
 		String s7 = "luppolo";
 		String s8 = "love";		
-		m.addParola(s1);
-		m.addParola(s2);
-		m.addParola(s3);
-		m.addParola(s4);
-		m.addParola(s5);
-		m.addParola(s6);
-		m.addParola(s7);
+		//m.addParola(s1);
+		//m.addParola(s2);
+		//m.addParola(s3);
+		//m.addParola(s4);
+		//m.addParola(s5);
+		//m.addParola(s6);
+		//m.addParola(s7);
 		
 		m.stampaParole();	
 		 //m.parolaNonLegata(s4);	
 		//m.totale();
-		m.parolaAccettata(s8);
+		//m.parolaAccettata(s8);
 
+		//m.parolaPresente(s8);
+		//m.parolaNonLegata(s1);
+		m.parolaAccettata(s1);
 	}
 
 }

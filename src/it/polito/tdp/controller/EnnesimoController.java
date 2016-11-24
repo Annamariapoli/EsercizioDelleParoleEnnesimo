@@ -63,7 +63,7 @@ public class EnnesimoController {
     	}
    
     	if(model.parolaAccettata(s)){                         //se la parola s è accettata
-    		model.addParola(s);                              //allora la aggiunge (il metodo nel model controlla nuovamente se non è presente il lista
+    		model.aggiungiParola(s);                              //allora la aggiunge (il metodo nel model controlla nuovamente se non è presente il lista
     		                                                //in teoria questo controllo non servirebbe xke fa gia tutto parolaAccettata(s)
     		                                               //ma non dovrebbe causare problemi, giusto?
     
@@ -74,7 +74,7 @@ public class EnnesimoController {
     		ch4ParolaGiaInserita.setSelected(false);
     		ch1ParolaNonPresente.setSelected(false);	
     	}
-    	if(model.parolaNonLegata(s)){
+    	if(model.parolaNonLegata(s)){                            //pero se metto una parola con piu di 2 lettere uguali, non la accetta
     		ch3ParolaNonLegata.setSelected(true);
             ch2ParolaAccettata.setSelected(false);
     		ch4ParolaGiaInserita.setSelected(false);
